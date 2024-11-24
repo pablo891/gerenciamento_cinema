@@ -1,0 +1,35 @@
+<section class="container width mt-5 py-5 px-3 box-shadow">
+    <div class="d-flex justify-content-between px-2">
+        <h1 class="text-center fs-2 text-white text-center">Cadastro de Sessão</h1>
+        <a href="/sessao"><i class="fa-solid fa-right-from-bracket text-white fs-4 py-1 justify-content-end"></i></a>
+    </div>
+        <form action="/sessao/store" method="post">
+            <section class="mt-4">
+                <label for="horario" class="mb-2">Horario</label>
+                    <input type="time" name="horario" id="horario" class="form-control py-2" placeholder="Título do Livro" required>
+            </section>
+
+            <section class="row my-3">
+                <div class="col-md-12">
+                    <label for="data" class="mb-2">Data fo filme</label>
+                        <input type="date" name="data" id="data" class="form-control py-2" placeholder="Ano de Publicação" required>
+                </div>
+            </section>
+
+            <section class="my-3">
+                <label for="filme" class="mb-2">Filme</label>
+                    <select name="filme" id="filme" class="form-select py-2" required>
+                        <option value="">Escolha uma opcão...</option>
+                        {{#each dados}}
+                        <option value="{{dataValues.id}}">{{dataValues.titulo}}</option>
+                        {{/each}}
+                    </select>
+            </section>
+
+                <section class="mb-2 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-cadastro py-2 px-3">Cadastrar Livro</button>
+                </section>
+            </form>
+        </section>
+    </section>
+</section>

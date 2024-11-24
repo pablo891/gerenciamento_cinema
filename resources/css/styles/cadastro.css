@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;   
+}
+.width{
+    width: 40%;
+}
+
+.bgc-gradient{
+    background-color: #12100D;
+}
+
+.bgc-orange{
+    background: #BF5309;
+    background: linear-gradient(135deg, #BF5309, #D3A630);
+}
+
+.box-shadow{
+    /* box-shadow: rgba(140, 140, 151, 0.25) 0px 13px 27px -5px, rgba(160, 156, 156, 0.3) 0px 8px 16px -8px; */
+    border-radius: 16px;
+}
+
+
+.form-control{
+    border-radius: 12px;
+    border: none;
+    background-color: #cf631a8f;
+    color: white;
+    transition: all 0.2s;
+}
+
+.form-control:hover{
+    transform: scale(1.01);
+    transition: all 0.2s;
+    background-color: #cf621abd;
+}
+
+.form-control:focus{
+    color: white;
+}
+
+.form-select{
+    border-radius: 12px;
+    border: none;
+    background-color: #cf631a8f;
+    color: rgb(223, 217, 217);
+    transition: all 0.2s;
+}
+
+.form-select:hover{
+    transform: scale(1.01);
+    transition: all 0.2s;
+    background-color: #cf621abd;
+}
+
+.form-select:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.hover-orange:hover{
+    background-color: #cf621abd;
+}
+
+.btn-cadastro{
+    background-color: #cf621abd;
+    color: rgb(223, 217, 217);
+    border: none;
+    transition: all 0.4s;
+
+}
+
+.btn-cadastro:hover{
+    background-color: #ce5c11c2;
+    transform: all 0.4s;
+    transform: scale(1.002);
+    color: white;
+    box-shadow: rgba(226, 222, 222, 0.363) 0px 10px 18px -7px;
+}
+
+.fa-solid:hover{
+    color: rgba(2, 2, 2, 0.829);
+}
+
+option{
+    background-color: #64300dee;
+    transition: all 0.1s;
+}
+
+label{
+    color: rgb(223, 217, 217);
+    background-color: none;
+}
+
+label:focus{
+    background-color: #aa4d0f6b
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border: none;
+    background-color: #aa4d0f6b
+}
+@media (max-width: 1000px){
+    .width{
+        width: auto;
+    }   
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-floating>label {
+        transition: all 0.2s;
+    }
+}

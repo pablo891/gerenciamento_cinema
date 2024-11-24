@@ -1,0 +1,55 @@
+<section class="container">
+    <div class="container mt-5">
+        {{!-- Exibição das mensagens flash de sucesso --}}
+        {{#if sucess_msg}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{sucess_msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+    </div>
+    <div class="row my-2">
+        {{#if error_msg}}
+        <div class="alert alert-danger alert-dismissible fade show col-md-6 mx-auto" role="alert">
+            {{error_msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+    </div>
+    {{!-- Exibição das mensagens de flash de sucesso --}}
+
+    <section class="container">
+        <!-- Cabeçalho -->
+        <section class="d-flex justify-content-between mt-4">
+            <h2 class="text-white fs-2">Filmes Disponíveis</h2>
+            <a href="/filme/create" class="btn btn-cadastro py-2">Cadastrar novo filme</a>
+        </section>
+
+        <hr style="color: aliceblue;">
+
+        <!-- Lista de Filmes -->
+        <section class="container my-4">
+            <div class="row">
+                {{#each dados}}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Titulo: {{dataValues.titulo}}</h5>
+                            <p class="card-text"><strong>ID:</strong> {{dataValues.id}}</p>
+                            <p class="card-text"><strong>Gênero:</strong> {{dataValues.genero}}</p>
+                            <p class="card-text"><strong>Duração:</strong> {{dataValues.duracao}}</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{>modalDelete2 idItem = dataValues.id}}
+
+                {{/each}}
+            </div>
+        </section>
+    </section>
+</section>

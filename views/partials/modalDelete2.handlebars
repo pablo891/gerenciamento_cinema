@@ -1,0 +1,18 @@
+<!-- Modal -->
+<div class="modal fade" id="modal{{idItem}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bgc-dark">
+      <div class="modal-header justify-content-between">
+        <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Atenção</h1>
+        <a href="/filme"><i class="fa-solid fa-xmark text-white fs-3"></i></a>
+      </div>
+      <div class="modal-body text-white">
+        Tem certeza que deseja excluir este item?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cancelar</button>
+        <a href="/filme/destroy/{{idItem}}" type="button" class="btn btn-excluir py-2">Deletar</a>
+      </div>
+    </div>
+  </div>
+</div>

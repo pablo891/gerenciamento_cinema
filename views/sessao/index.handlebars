@@ -1,0 +1,59 @@
+<section class="container">
+    <div class="container mt-5">
+        {{!-- Exibição das mensagens flash de sucesso --}}
+        {{#if sucess_msg}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{sucess_msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+    </div>
+    <div class="row my-2">
+        {{#if error_msg}}
+        <div class="alert alert-danger alert-dismissible fade show col-md-6 mx-auto" role="alert">
+            {{error_msg}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/if}}
+    </div>
+        {{!-- Fim das mensagens flash de sucesso --}}
+    <section class="container">
+        <!-- Cabeçalho -->
+        <section class="d-flex justify-content-between mt-4">
+            <h2 class="text-white">Sessões Disponíveis</h2>
+            <a href="/sessao/create" class="btn btn-cadastro py-2">Cadastrar nova Sessão</a>
+        </section>
+
+        <hr style="color: aliceblue;">
+
+        <!-- Lista de Livros -->
+        <section class="container my-4">
+            <div class="row">
+                {{#each dados}}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100 bgc-dark">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-evenly">
+                                <img src="images/brand/logo_cinema.png" width="100" height="90" alt="">
+                                <h5 class="card-title">Filme: {{filme.dataValues.titulo}}</h5>
+                            </div>
+                            <p class="card-text"><strong>Código da Sessão:</strong> {{dataValues.id}}</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text"><strong>Data:</strong> {{dataValues.data}}</p>
+                                <p class="card-text"><strong>Horário:</strong> {{dataValues.horario}}</p>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="" class="btn btn-sm btn-excluir py-2 px-5" data-bs-toggle="modal"
+                                    data-bs-target="#modal{{dataValues.id}}"><strong>Excluir</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{>modalDelete idItem = dataValues.id}}
+
+                {{/each}}
+            </div>
+        </section>
+    </section>
+</section>

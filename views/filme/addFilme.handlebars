@@ -1,0 +1,58 @@
+<section class="container width mt-5 py-5 px-3 box-shadow">
+    <div class="d-flex justify-content-between px-2">
+        <h1 class="text-center fs-2 text-white text-center">Cadastro de Filmes</h1>
+        <a href="/filme"><i class="fa-solid fa-right-from-bracket btn-hover text-white fs-4 py-1 justify-content-end"></i></a>
+    </div>
+
+    <form action="/filme/store" method="post">
+
+        {{!--1º Campo: Título --}}
+        <section class="mt-5">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"  name="titulo" id="titulo" placeholder="name@example.com" required>
+                <label for="floatingInput">Título do filme*</label>
+            </div>
+        </section>
+
+
+        <section class="d-flex-justify-content-between row">
+            <section class="my-3 col-md-6">
+                <select name="genero" id="genero" class="form-select py-4 px-2" required>
+                    <option value="">Escolha o gênero*</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Ficção Científica">Ficção científica</option>
+                </select>
+            </section>
+           {{! 3º Campo: Selecionar Duração}}
+        <section class="my-3 col-md-6">
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="duracao" name="duracao" placeholder="name@example.com"
+                    required>
+                <label for="floatingInput">Duração do filme*</label>
+            </div>
+        </section>
+        </section>
+
+         {{!-- 4º Campo: Selecionar Classificação indicada --}}
+        <section class="my-3">
+            <select name="classificacao" id="classificacao" class="form-select py-4" required>
+                <option value="">Escolha a classificação*</option>
+                <option class="hover-orange" value="Livre">Livre</option>
+                <option class="hover-orange" value="10 anos">Não recomendado para menores de 10 anos</option>
+                <option class="hover-orange" value="14 anos">Não recomendado para menores de 14 anos</option>
+                <option class="hover-orange" value="18 anos">Não recomendado para menores de 18 anos</option>
+
+
+            </select>
+        </section>
+
+        {{!-- 5 º Campo: Botão de Cadastrar --}}
+        <section class="mb-2 d-flex justify-content-center my-5">
+            <button type="submit" class="btn btn-cadastro py-2 px-4">Cadastrar</button>
+        </section>
+
+    </form>
+</section>

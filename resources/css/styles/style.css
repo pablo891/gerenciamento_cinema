@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.font-text{
+    font-family: "Lora", serif;
+}
+.font-12{
+    font-size: 16px;
+}
+
+.bgc-dark{
+    background-color:rgb(34, 31, 31);
+    color: white;
+}
+
+.box-shadow-box{
+    box-shadow: rgba(190, 179, 179, 0.233) 0px 2px 4px, rgba(187, 179, 179, 0.11) 0px 7px 10px -3px, rgba(182, 175, 175, 0.103) 0px -3px 0px inset;
+}
+
+.bd-radius{
+    border-radius: 6px;
+}
+
+.btn-excluir{
+    background-color: #cf621abd;
+    color: rgb(223, 217, 217);
+    border: none;
+    transition: all 0.15s;
+}
+
+.btn-excluir:hover{
+    background-color: #643211bd;
+}
