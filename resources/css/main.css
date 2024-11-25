@@ -54,3 +54,13 @@ body{
 .footer{
   backdrop-filter: blur(12px);
 }
+
+.card-img-top{
+  transition: all 0.2s;
+}
+
+.card-img-top:hover{
+  transform: scale(1.01);
+  transition: all 0.2s;
+  box-shadow: rgba(190, 179, 179, 0.233) 0px 2px 4px, rgba(187, 179, 179, 0.11) 0px 7px 10px -3px, rgba(182, 175, 175, 0.103) 0px -3px 0px inset;
+}

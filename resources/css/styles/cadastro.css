@@ -21,6 +21,9 @@
     border-radius: 16px;
 }
 
+.form-control::placeholder{
+    color: white;
+}
 
 .form-control{
     border-radius: 12px;

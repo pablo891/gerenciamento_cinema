@@ -9,9 +9,10 @@ const sessao = sequelizeConfig.define(
     'sessao', // Nome do modelo
     {
         // Define os campos da tabela "livros" com seus respectivos tipos de dados
-        data: { type: sequelizeDb.DATE 
+        data: { type: sequelizeDb.TEXT 
         }, // Campo "titulo" do tipo STRING
-        horario: { type: sequelizeDb.TIME } // Campo "ano_publicacao" do tipo NUMBER
+        horario: { type: sequelizeDb.TIME 
+        } // Campo "ano_publicacao" do tipo NUMBER
     }
 )
 
