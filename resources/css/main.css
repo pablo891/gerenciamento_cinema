@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
   padding: 0;
@@ -15,4 +16,41 @@ body{
   transition: all 0.3s;
   transform: none;
   border-radius: 14px;
+}
+
+.navbar-toggler{
+  border: none;
+  transition: all 0.4s;
+}
+
+.font-titulo{
+  font-family: 'Oswald', sans-serif;
+}
+
+.navbar-toggler:hover{
+  transition: all 0.4s;
+  box-shadow: rgba(145, 142, 142, 0.048) 0px -12px 14px 0px inset, rgba(156, 155, 155, 0.068) 0px -18px 15px 0px inset, rgba(112, 111, 111, 0.11) 0px -39px 20px 0px inset, rgba(128, 125, 125, 0.06) 0px 2px 1px, rgba(131, 128, 128, 0.041) 0px 4px 2px, rgba(134, 132, 132, 0.055) 0px 8px 4px, rgba(148, 146, 146, 0.09) 0px 0px 0px, rgba(131, 126, 126, 0.09) 0px 0px 0px;
+}
+
+.navbar-toggler:focus{
+  border: none;
+  box-shadow: none;
+}
+
+.privacy{
+  text-decoration: none;
+  color: white;
+}
+
+.privacy:hover{
+  transition: all 0.1s;
+  color: rgba(198, 206, 212, 0.74);
+}
+
+.icon:hover{
+  color: rgba(192, 202, 211, 0.74);
+}
+
+.footer{
+  backdrop-filter: blur(12px);
 }

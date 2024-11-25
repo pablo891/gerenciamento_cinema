@@ -30,3 +30,11 @@
 .btn-excluir:hover{
     background-color: #643211bd;
 }
+
+.card-hover:hover{
+    box-shadow: rgba(221, 213, 213, 0.123) 0px 2px 4px, rgba(235, 229, 229, 0.11) 0px 7px 10px -3px, rgba(212, 207, 207, 0.103) 0px -3px 0px inset;
+}
+
+.bgc-orange{
+    background-color: #ff6600;
+}

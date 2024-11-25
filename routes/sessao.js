@@ -38,7 +38,7 @@ router.post('/store', async (req, res) => {
 
     // Envia mensagem de sucesso e redireciona
     req.flash('sucess_msg', "Sessão cadastrado com sucesso!");
-    res.redirect('/');
+    res.redirect('/sessao');
 });
 
 // 2ª ROTA - EXIBIR A PÁGINA INICIAL DOS LIVROS
@@ -67,6 +67,13 @@ router.get('/destroy/:id', async (req, res) => {
             id: req.params.id // Obtém o ID do parâmetro da URL (:id)
         }
     });
+    if (resultado) {
+        req.flash('error_msg', "Sessão excluída")
+        res.redirect('/sessao')
+    } else {
+        // Caso contrário, retorna uma mensagem de erro no formato JSON
+        res.json({ erro: "Não foi possível excluir" })
+    }
 
     res.redirect('/'); // Redireciona para a página inicial
 });

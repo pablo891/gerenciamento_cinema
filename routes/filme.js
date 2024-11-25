@@ -37,7 +37,7 @@ router.post('/store', async (req, res) => {
         res.redirect('/')
     } else {
         // Define uma mensagem de sucesso e redireciona para a página de filme
-        req.flash('sucess_msg', "Autor criado com sucesso")
+        req.flash('sucess_msg', "Filme Cadastrado com sucesso com sucesso")
         res.redirect('/filme')
     }
 })
@@ -74,7 +74,8 @@ router.get('/destroy/:id', async (req, res) => {
 
     // Se o autor for deletado com sucesso, redireciona para a página inicial
     if (resultado) {
-        res.redirect('/')
+        req.flash('error_msg', "Filme excluído")
+        res.redirect('/filme')
     } else {
         // Caso contrário, retorna uma mensagem de erro no formato JSON
         res.json({ erro: "Não foi possível excluir" })

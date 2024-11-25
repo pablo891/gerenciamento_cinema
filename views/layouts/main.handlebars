@@ -9,22 +9,24 @@
   <link rel="stylesheet" href="/css/styles/style.css">
   <link rel="stylesheet" href="/css/styles/cadastro.css">
   <link rel="stylesheet" href="/css/main.css">
-  <title>Sistema De Gerenciamento de Biblioteca</title>
+  <title>Cine Code - Film Production</title>
 </head>
 
 <body>
-  {{!-- Navbar --}}
-  <nav class="navbar text-bg-warning" data-bs-theme="light">
+  <header>
+      {{!-- Navbar --}}
+  <nav class="navbar py-2 bgc-orange" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sistema de Gerenciamento de Biblioteca</a>
+      <img src="images/brand/logo_menu.png" width="110" height="60" alt="">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="text-bg-warning offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class=" offcanvas offcanvas-end bgc-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header d-flex justify-content-between">
+            <img src="images/brand/logo_menu.png" height="50" width="90" alt="Logo Sidebar">
+            <h5 class="offcanvas-title mx-2" id="offcanvasNavbarLabel">Painel de navegação</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -43,26 +45,29 @@
       </div>
     </div>
   </nav>
+  </header>
   {{!-- Fim da Navbar --}}
+
     {{{body}}}
-  <footer class="container-fluid text-bg-warning py-3 mt-5" data-bs-target="light">
+  
+  <footer class="container-fluid py-3 mt-5  footer fixed-bottom" data-bs-theme="dark">
     <section class="row">
-      <div class="col-md-9 fs-5 copy">
-        <p>
-          &copy;2024 Sistema de Gerenciamento de Biblioteca |
-          <a href="" style="color:#000;">Privacidade</a>  |
-          <a href="" style="color:#000;">Políticas</a> |
+      <div class="col-md-10 d-flex">
+        <p class="text-white">
+          &copy;2024 Cine Code - Film Production |
+          <a href="#" class="privacy">Privacidade</a>  |
+          <a href="#" class="privacy">Políticas</a> |
         </p>
       </div>
       
-      <div class="col-md-3">
-        <div class="fs-4 d-flex justify-content-around social">
-        <a href="" target="_blank" class="text-black"><i class="fa-brands fa-instagram"></i></a>
-        <a href="" target="_blank" class="text-black"><i class="fa-brands fa-youtube"></i></a>
-        <a href="" target="_blank" class="text-black"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="" target="_blank" class="text-black"><i class="fa-brands fa-facebook"></i></a>
-        <a href="" target="_blank" class="text-black"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="" target="_blank" class="text-black"><i class="fa-brands fa-tiktok"></i></a>
+      <div class="col-md-2">
+        <div class="fs-5 d-flex justify-content-evenly social">
+        <a href="" target="_blank" class="text-white icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" target="_blank" class="text-white icon"><i class="fa-brands fa-youtube"></i></a>
+        <a href="" target="_blank" class="text-white icon"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="" target="_blank" class="text-white icon"><i class="fa-brands fa-facebook"></i></a>
+        <a href="" target="_blank" class="text-white icon"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" target="_blank" class="text-white icon"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
      </section>

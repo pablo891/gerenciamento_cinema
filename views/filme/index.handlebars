@@ -1,5 +1,5 @@
 <section class="container">
-    <div class="container mt-5">
+    <div class="container">
         {{!-- Exibição das mensagens flash de sucesso --}}
         {{#if sucess_msg}}
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -31,15 +31,15 @@
         <section class="container my-4">
             <div class="row">
                 {{#each dados}}
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm h-100">
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm h-100 bgc-dark card-hover">
                         <div class="card-body">
-                            <h5 class="card-title">Titulo: {{dataValues.titulo}}</h5>
-                            <p class="card-text"><strong>ID:</strong> {{dataValues.id}}</p>
+                            <p class="card-title"><strong>Filme:</strong> {{dataValues.titulo}}</p>
                             <p class="card-text"><strong>Gênero:</strong> {{dataValues.genero}}</p>
                             <p class="card-text"><strong>Duração:</strong> {{dataValues.duracao}}</p>
-                            <div class="d-flex justify-content-between">
-                                <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                            <p class="card-text"><strong>Classificação:</strong> {{dataValues.classificacao}}</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="" class="btn btn-sm btn-excluir pt-2 px-3" data-bs-toggle="modal"
                                     data-bs-target="#modal{{dataValues.id}}">Excluir</a>
                             </div>
                         </div>
